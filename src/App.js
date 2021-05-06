@@ -12,6 +12,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import Cart from "./components/Cart";
 import Dashboard from "./components/Dashboard"
 import Editpage from './components/Editpage';
+import CakeDetails from './components/CakeDetails';
+import Details from './components/Details';
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/Cart" component={Cart}></Route>
         <Route path="/Dashboard" component={Dashboard}></Route>
         <Route path="/Editpage" component={Editpage}></Route>
+        <Route exact path="/CakeDetails/:id" exact component={CakeDetails} />
+         <Route exact path="/Details/:id" component={Details} />
         
         
 
