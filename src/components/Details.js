@@ -53,7 +53,7 @@ class Details extends Component {
                 <img src={this.props.cakedata.image} style={{height:"100%" ,width:'23vw'}}class="card-img-top cakeImg" alt="..."></img>
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body" style={{color:"tomato" ,marginRight:"15em"}}>
+                  <div class="card-body" style={{color:"red" ,marginRight:"15em"}}>
                       <h3 class="card-title">{this.props.cakedata.name}</h3>                
                             <p class="card-text">Ratings : {this.props.cakedata.ratings}</p>  
                             <p class="card-text">Price : {this.props.cakedata.price}</p>  
@@ -68,7 +68,7 @@ class Details extends Component {
                   this.registers();
                  
                 }} type="button" class="btn btn-success">Add To Cart<i class="fas fa-cart-plus"></i></button>
-                 <button type="button" class="btn btn-success" style={{marginLeft:"1em"}}>Info</button>
+                 <button type="button" class="btn btn-success" style={{marginLeft:"1em"}}>Buy</button>
                   </div>
             
                 </div>
