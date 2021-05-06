@@ -18,7 +18,7 @@ class Navbar extends Component{
 render(){
     return(
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style= {{backgroundColor:"#C0C0C0",zIndex:30}}>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style= {{backgroundColor:"#ffefd5",zIndex:30}}>
   <div class="container-fluid">
    <Link to="/Home"><a class="navbar-brand" href="#">My Cake Shop</a></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

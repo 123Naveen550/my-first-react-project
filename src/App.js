@@ -11,6 +11,7 @@ import Search from './components/Search';
 import { ToastContainer, toast } from 'react-toastify';
 import Cart from "./components/Cart";
 import Dashboard from "./components/Dashboard"
+import Editpage from './components/Editpage';
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
    
 
     <BrowserRouter>
+    <Navbar></Navbar>
       <div>
-        <Navbar></Navbar>
+       
         <Route path="/Home" component={Home}></Route>
         <Route path="/login" exact component={Login}></Route>
         <Route path="/Cake"  exact component= {Cake}></Route>
@@ -29,6 +31,7 @@ function App() {
         <Route path="/Search" component={Search}></Route>
         <Route path="/Cart" component={Cart}></Route>
         <Route path="/Dashboard" component={Dashboard}></Route>
+        <Route path="/Editpage" component={Editpage}></Route>
         
         
 

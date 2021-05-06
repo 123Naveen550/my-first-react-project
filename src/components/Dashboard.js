@@ -31,10 +31,10 @@ function DashBoard(props) {
   //    })
   // }
   // let onbuton = () => {
-  //   let bun = allCakes.sort((a, b) => {
+  //   let change = allCakes.sort((a, b) => {
   //          return (a.price-b.price)
   //   })
-  //   console.log(bun);
+  //   console.log(change);
   //  }
 
   return (
@@ -104,9 +104,7 @@ function DashBoard(props) {
                           aria-label="Basic example"
                           style={{ cursor: "pointer" }}
                         >
-                          <button type="button" class="btn btn-secondary">
-                            +
-                          </button>
+                       <Link to="Editpage"><button type="button" class="btn btn-secondary">+</button></Link> 
                           <button type="button" class="btn btn-secondary">
                             -
                           </button>
