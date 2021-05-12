@@ -11,7 +11,7 @@ function Sidebar() {
             <div>
                  <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block sidebar"style={{background:"#ffe4c4"}}>
+        <nav class="col-md-2 d-none d-md-block sidebar"style={{background:"#D9456D "}}>
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">

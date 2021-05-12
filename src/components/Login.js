@@ -36,6 +36,7 @@ class Login extends Component{
   }
   
   login={}
+  message={}
   
   getemail=(event)=>{ 
       this.login.email=event.target.value
@@ -61,13 +62,19 @@ class Login extends Component{
           axios({
               method:"post",
               url:"https://apifromashu.herokuapp.com/api/login",
-              data:this.state.login         
+              data:this.state.login    
+
           }).then((res)=>{
-              if(res.data){
-                  toast("Welcome to Cake Shop");
-                  this.props.history.push('/')
-                  console.log("response",res);
-              }
+            localStorage.setItem("tokenId",res.data.token)
+            console.log(res.data)
+            this.message = res.data;
+            if(this.message.message !== 'Invalid Credentials'){
+                toast("Welcome to Our CakeShop");                    
+                console.log("message ;.....",this.message);
+                this.props.history.push('/');
+            } else {
+                toast("Please Check Your Email or Password");
+            } 
           },(err)=>{
               toast(" Sorry You enter Wrong details");
           })            
@@ -83,7 +90,7 @@ class Login extends Component{
     {
         return(
           <div>
-          <form style={{padding:"10em 27em", backgroundColor:"#ffe4b5"}}>
+          <form style={{padding:"10em 27em", backgroundColor:"#A10B23 "}}>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" onChange={this.getemail} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>

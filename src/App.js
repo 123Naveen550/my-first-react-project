@@ -9,11 +9,13 @@ import Registration from './components/Registration'
 import Newpass from './components/Newpass'
 import Search from './components/Search';
 import { ToastContainer, toast } from 'react-toastify';
-import Cart from "./components/Cart";
+import Carts from "./components/Carts";
 import Dashboard from "./components/Dashboard"
 import Editpage from './components/Editpage';
 import CakeDetails from './components/CakeDetails';
 import Details from './components/Details';
+import Product from "./components/Product"
+
 
 
 function App() {
@@ -31,11 +33,13 @@ function App() {
         <Route path="/Registration" component={Registration}></Route> 
         <Route path="/Newpass" component={Newpass}></Route>
         <Route path="/Search" component={Search}></Route>
-        <Route path="/Cart" component={Cart}></Route>
+        <Route path="/Carts" component={Carts}></Route>
         <Route path="/Dashboard" component={Dashboard}></Route>
         <Route path="/Editpage" component={Editpage}></Route>
         <Route exact path="/CakeDetails/:id" exact component={CakeDetails} />
          <Route exact path="/Details/:id" component={Details} />
+         <Route path="/Product" component={Product}></Route>
+        
         
         
 

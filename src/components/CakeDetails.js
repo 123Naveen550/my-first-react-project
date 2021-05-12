@@ -13,11 +13,10 @@ function CakeDetails(props){
 
     var [cakeresult, setCakes] = useState({});
 
-    console.log("ca",cakeresult,setCakes);
-    // var query = queryString.parse(props.location.cakes);
-    // console.log( props.match.params.id);
+    console.log("result",cakeresult,setCakes);
+    
     let qq= props.match.params.id;
-    // alert("hii")
+  
 
 
     useEffect(() => {
@@ -53,7 +52,7 @@ function CakeDetails(props){
         
         )
     }
-// import { format } from "path";
+
 
 export default CakeDetails;
 
