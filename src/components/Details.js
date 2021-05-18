@@ -32,7 +32,6 @@ class Details extends Component {
             data:cakeinfo,
             headers:{"authtoken":localStorage.getItem("tokenId")}
         }).then((res)=>{
-            // console.log(res.data)
             if(res.data !== "Session Expired"){
                 this.addCartPro=res.data.data
                 this.addCart.push(this.addCartPro)
@@ -40,7 +39,7 @@ class Details extends Component {
                     product:this.addCart
                 })
                 console.log(this.state.product);
-                toast("Product : Add to Cart");
+                toast("Product : Successfull added");
 
             }
             else{

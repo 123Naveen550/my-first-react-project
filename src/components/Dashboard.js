@@ -6,7 +6,6 @@ import "./Dash.css";
 
 function DashBoard(props) {
   const [allCakes, setCakes] = useState([]);
-  // let [sortcake , setsortcake]= useState([]);
 
   useEffect(() => {
     axios({
@@ -15,9 +14,8 @@ function DashBoard(props) {
     }).then(
       (response) => {
         console.log(response.data);
-        //  setsortcake(response.data.data)
         setCakes(response.data.data);
-        // cake()
+
       },
       (error) => {
         console.log(error);
@@ -25,17 +23,7 @@ function DashBoard(props) {
     );
   }, []);
 
-  // function cake() {
-  //   allCakes.sort((a,b) => {
-  //     console.log(a.price - b.price);
-  //    })
-  // }
-  // let onbuton = () => {
-  //   let change = allCakes.sort((a, b) => {
-  //          return (a.price-b.price)
-  //   })
-  //   console.log(change);
-  //  }
+
 
   return (
     <div>
@@ -51,10 +39,10 @@ function DashBoard(props) {
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Sort</button>
+                {/* <button class="btn btn-sm btn-outline-secondary">Sort</button>
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                   Filter
-                </button>
+                </button> */}
               </div>
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
@@ -105,9 +93,9 @@ function DashBoard(props) {
                           style={{ cursor: "pointer" }}
                         >
                        <Link to="Editpage"><button type="button" class="btn btn-secondary">+</button></Link> 
-                          <button type="button" class="btn btn-secondary">
+                          {/* <button type="button" class="btn btn-secondary">
                             -
-                          </button>
+                          </button> */}
                         </div>
                       </td>
                     </tr>

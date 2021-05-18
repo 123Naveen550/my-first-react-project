@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'react-toastify/dist/ReactToastify.css';
+import { Provider } from "react-redux"
+import BP from "./Redux/store";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={BP}>
+ <React.StrictMode>
+   <App />
+  </React.StrictMode>
+  </Provider>,
+    
+  
   document.getElementById('root')
 );
 

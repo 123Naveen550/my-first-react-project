@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react'
 import Product from './Product';
-// import {Redirect} from 'react-router-dom'
+import { connect } from "react-redux"
 
  class Carts extends Component {
      constructor(props) {
@@ -17,8 +17,13 @@ import Product from './Product';
             headers:{"authtoken":localStorage.tokenId}
          }).then((res)=>{
              console.log("res",res.data);
+             this.props.dispatch({
+                type:"New Order",
+                payload:res.data
+             })
             this.setState({
-                cake:res.data.data
+                cake:res.data.data,
+                
             })
          },(err)=>{
              console.log("Error",err);
@@ -55,5 +60,10 @@ import Product from './Product';
         )
     }
 }
-export default Carts
+export default connect((state, props) => {
+    console.log(state)
+    return {
+      NewOrder:state["New Order"]
+    }
+}) (Carts) ;
 

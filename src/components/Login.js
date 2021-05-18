@@ -2,6 +2,7 @@ import {Component} from "react"
 import {Link} from "react-router-dom"
 import axios from "axios";
 import { toast } from "react-toastify";
+import { connect } from "react-redux"
 class Login extends Component{
 
   constructor(){
@@ -71,6 +72,11 @@ class Login extends Component{
             if(this.message.message !== 'Invalid Credentials'){
                 toast("Welcome to Our CakeShop");                    
                 console.log("message ;.....",this.message);
+                this.props.dispatch({
+                    type:"Login",
+                    payload:res.data
+
+                })
                 this.props.history.push('/');
             } else {
                 toast("Please Check Your Email or Password");
@@ -90,7 +96,7 @@ class Login extends Component{
     {
         return(
           <div>
-          <form style={{padding:"10em 27em", backgroundColor:"#A10B23 "}}>
+          <form style={{padding:"10em 27em", backgroundColor:"#A10B23 " ,color:"white"}}>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" onChange={this.getemail} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
@@ -119,5 +125,5 @@ class Login extends Component{
   }
    
 
-export default Login;
+export default connect() (Login);
 
