@@ -15,6 +15,8 @@ import Editpage from './components/Editpage';
 import CakeDetails from './components/CakeDetails';
 import Details from './components/Details';
 import Product from "./components/Product"
+import CheckOut from './components/CheckOut';
+import checkout from './components/CheckOut';
 
 
 
@@ -39,6 +41,8 @@ function App() {
         <Route exact path="/CakeDetails/:id" exact component={CakeDetails} />
          <Route exact path="/Details/:id" component={Details} />
          <Route path="/Product" component={Product}></Route>
+         <Route path="/Checkout" component={checkout}></Route>
+         
         
         
         

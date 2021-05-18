@@ -6,7 +6,7 @@ export function Naveen (state = {},{type,payload}){
          state["isloggedin"] = true 
          return state
         }
-        case "New Order":{
+        case "NewOrder":{
             state={...state}
             state['orderplace']=payload
             return state

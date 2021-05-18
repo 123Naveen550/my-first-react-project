@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react'
 import Product from './Product';
 import { connect } from "react-redux"
+import { Link } from 'react-router-dom';
 
  class Carts extends Component {
      constructor(props) {
@@ -18,7 +19,7 @@ import { connect } from "react-redux"
          }).then((res)=>{
              console.log("res",res.data);
              this.props.dispatch({
-                type:"New Order",
+                type:"NewOrder",
                 payload:res.data
              })
             this.setState({
@@ -35,7 +36,7 @@ import { connect } from "react-redux"
         return (
             <div> 
             <div class="col-md-5 ml-sm-auto col-lg-10 px-md-1" style={{top:"6em" ,right:"11em"}}> 
-            {/* <button type="button" class="btn btn-primary">Process to Pay</button> */}
+         <Link to="/Checkout"><button type="button" class="btn btn-primary">CheckOut</button></Link> 
             <table class="table">
                      <thead>
                         <tr>
@@ -63,7 +64,7 @@ import { connect } from "react-redux"
 export default connect((state, props) => {
     console.log(state)
     return {
-      NewOrder:state["New Order"]
+      NewOrder:state["NewOrder"]
     }
 }) (Carts) ;
 

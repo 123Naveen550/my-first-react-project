@@ -9,7 +9,7 @@ store.dispatch({
 })
 
 store.dispatch({
-    type:"New Order"
+    type:"NewOrder"
 })
 
 
