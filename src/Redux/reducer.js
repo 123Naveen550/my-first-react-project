@@ -11,6 +11,13 @@ export function Naveen (state = {},{type,payload}){
             state['orderplace']=payload
             return state
         }
+
+        case "Orderlist":{
+            state={...state}
+            state['order']=payload
+            return state
+        }
+ 
  
  
         default : return state

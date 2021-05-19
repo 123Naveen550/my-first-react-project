@@ -12,9 +12,9 @@ import axios from 'axios'
      total=0
      cakes=[]
     componentDidMount() {
-        // console.log(this.props)
+  
         this.props.NewOrder.data.map((each)=>{
-            // console.log(each)
+    
              this.cakes.push(each.name);
             this.total=this.total+each.price;
         });
@@ -58,10 +58,10 @@ import axios from 'axios'
     render(){
         return (
             <div style={{margin:"-30px"}}>
-            <div style={{backgroundColor:"lightgray",position:"fixed",left:"0px",right:"0px"}}>
+            <div style={{backgroundColor:"#9B7EDF  ",position:"fixed",left:"0px",right:"0px"}}>
             <div style={{width:"400px" ,margin:"100px 450px"}}>
                 <form style={{border:"2px solid #7E7C7C",boxShadow:"2px"}} >
-                    <h1 style={{color:"red"}}>Order Details</h1>
+                    <h1 style={{color:"white"}}>Order Details</h1>
                 <div className="form-group">
                     <label for="exampleInputId"> Name</label>
                     <input type="text" onChange={this.userName.bind(this)}  className="form-control" id="exampleInputId" aria-describedby="IdHelp" ></input>
@@ -83,11 +83,11 @@ import axios from 'axios'
                     <input type="number" onChange={this.phone.bind(this)} className="form-control" id="exampleInputName"></input>
                 </div>
                 
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label for="exampleInputName">Cakes</label>
                     <input type="text" className="form-control" id="exampleInputName">
                     </input>
-                </div>
+                </div> */}
                 <div className="form-group">
                     <label for="exampleInputPrice">price</label>
                     <input type="Number" className="form-control" id="exampleInputPrice" ></input>
@@ -102,7 +102,7 @@ import axios from 'axios'
     }
 }
 export default connect((state,props)=>{
-// console.log(state);
+
 return{
     NewOrder:state["orderplace"]
 }

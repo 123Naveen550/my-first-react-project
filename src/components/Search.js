@@ -5,13 +5,13 @@ import axios from "axios";
 
 function Search(props) {
   var [cakeresult, setCakes] = useState([]); 
-  var [showSpinner,setShowSpinner]=useState(false);
+  var [isloading,setloading]=useState(false);
   var query = queryString.parse(props.location.search);
   console.log(query.q);
 
   useEffect(() => {
     var apiurl = "https://apifromashu.herokuapp.com/api/searchcakes?q=" + query.q;
-    setShowSpinner(true)
+    setloading(true)
     axios({
       
       method: "get",
@@ -20,7 +20,7 @@ function Search(props) {
       (response) => {
         console.log("search api", response.data);
         setCakes(response.data.data);
-        setShowSpinner(false)
+        setloading(false)
       },
       (error) => {
         console.log(error);
@@ -35,7 +35,13 @@ function Search(props) {
     
     
     <div className="row">
-    { showSpinner && <div><h1>Loading.........</h1></div>}
+      {isloading && <div>
+        <div class = "d-flex justify-content-center" style={{margin:"100px 30px"}}>
+          <div class="spinner-border" role="status">
+            <span class = "sr-only">Loading...</span>
+          </div>
+        </div>
+        </div>}
       {cakeresult.map((each) => {
         return <Cake cakedata={each} />;
       })}

@@ -11,6 +11,9 @@ store.dispatch({
 store.dispatch({
     type:"NewOrder"
 })
+store.dispatch({
+    type:"Myorder"
+})
 
 
 console.log("after dispatch store ka state" , store.getState())
