@@ -59,7 +59,7 @@ class Myorder extends Component {
                         aria-expanded="true"
                         aria-controls="collapseOne"
                       >
-                        Name:-({ele.name})
+                        Name:({ele.name})
                         <span style={{ marginLeft: "500px" }}>
                           {ele.orderdate}
                         </span>
@@ -79,10 +79,10 @@ class Myorder extends Component {
                         <p>
                           Cakes({ele.cakes})({ele.orderid})
                         </p>
-                        <p>Address({ele.address})</p>
-                        <p>PhoneNo({ele.phone})</p>
-                        <p>Pincode({ele.pincode})</p>
-                        <p>PaymentMode({ele.mode})</p>
+                        <p>Address:({ele.address})</p>
+                        <p>PhoneNo:({ele.phone})</p>
+                        <p>Pincode:({ele.pincode})</p>
+                        <p>PaymentMode:({ele.mode})</p>
                       </div>
                     </div>
                   </div>

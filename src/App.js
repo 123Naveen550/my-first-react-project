@@ -18,6 +18,7 @@ import Product from "./components/Product"
 import CheckOut from './components/CheckOut';
 import checkout from './components/CheckOut';
 import Myorder from './components/Myorder'
+import Addcake from './components/Addcake'
 
 
 
@@ -42,8 +43,9 @@ function App() {
         <Route exact path="/CakeDetails/:id" exact component={CakeDetails} />
          <Route exact path="/Details/:id" component={Details} />
          <Route path="/Product" component={Product}></Route>
-         <Route path="/Checkout" component={checkout}></Route>
+         <Route path="/CheckOut" component={CheckOut}></Route>
          <Route path="/Myorder" component={Myorder}></Route>
+         <Route path="/Addcake" component={Addcake}></Route>
          
         
         

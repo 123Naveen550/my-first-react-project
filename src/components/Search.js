@@ -42,10 +42,10 @@ function Search(props) {
           </div>
         </div>
         </div>}
-      {cakeresult.map((each) => {
+      {! isloading && cakeresult.map((each) => {
         return <Cake cakedata={each} />;
       })}
-      {cakeresult.length<=0 && <div>
+      {!isloading && cakeresult.length<=0 && <div>
                 <div class="card" style={{marginLeft:"16em",marginTop:"9em"}}>
                     <div class="card-header">
                         <b>Oop!</b> 

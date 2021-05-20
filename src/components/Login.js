@@ -73,11 +73,11 @@ class Login extends Component{
                 toast("Welcome to Our CakeShop");                    
                 console.log("message ;.....",this.message);
                 this.props.dispatch({
-                    type:"Login",
+                    type:"LOGIN",
                     payload:res.data
 
                 })
-                this.props.history.push('/');
+                this.props.history.push('/Home');
             } else {
                 toast("Please Check Your Email or Password");
             } 
