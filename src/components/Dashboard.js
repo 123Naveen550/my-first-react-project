@@ -44,6 +44,7 @@ function DashBoard(props) {
                   Filter
                 </button> */}
               </div>
+            <Link to="/Addcake"><button type="button" class="btn btn-secondary">Addcake</button></Link>
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
                 This week

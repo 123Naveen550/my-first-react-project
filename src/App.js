@@ -19,6 +19,9 @@ import CheckOut from './components/CheckOut';
 import checkout from './components/CheckOut';
 import Myorder from './components/Myorder'
 import Addcake from './components/Addcake'
+import Routes from './components/Routes';
+import CartUi from './components/CartUi';
+
 
 
 
@@ -46,6 +49,8 @@ function App() {
          <Route path="/CheckOut" component={CheckOut}></Route>
          <Route path="/Myorder" component={Myorder}></Route>
          <Route path="/Addcake" component={Addcake}></Route>
+         <Route exact path="/Routes" component={Routes}/>
+         <Route path="/CartUi" component={CartUi}/>
          
         
         

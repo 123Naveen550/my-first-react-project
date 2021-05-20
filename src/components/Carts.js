@@ -36,7 +36,7 @@ import { Link } from 'react-router-dom';
         return (
             <div> 
             <div class="col-md-5 ml-sm-auto col-lg-10 px-md-1" style={{top:"6em" ,right:"11em"}}> 
-         <Link to="/Checkout"><button type="button" class="btn btn-primary">CheckOut</button></Link> 
+         <Link to="/Routes"><button type="button" class="btn btn-primary">CheckOut</button></Link> 
             <table class="table">
                      <thead>
                         <tr>
