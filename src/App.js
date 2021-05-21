@@ -34,8 +34,8 @@ function App() {
     <Navbar></Navbar>
       <div>
        
-        <Route path="/Home" component={Home}></Route>
-        <Route path="/login" exact component={Login}></Route>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/Login" exact component={Login}></Route>
         <Route path="/Cake"  exact component= {Cake}></Route>
         <Route path="/Registration" component={Registration}></Route> 
         <Route path="/Newpass" component={Newpass}></Route>

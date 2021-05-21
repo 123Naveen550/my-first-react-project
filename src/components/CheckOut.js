@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import { toast } from "react-toastify";
 
  class CheckOut extends Component {
      constructor(props) {
          super(props)
          this.state={
             
+            
          }
      }
      total=0
      cakes=[]
+     message={}
     componentDidMount() {
   
         this.props.NewOrder.data.map((each)=>{
@@ -52,8 +55,15 @@ import axios from 'axios'
             headers:{"authtoken":localStorage.tokenId}
         }).then((res)=>{
             console.log(res.data)
-        },(err)=>{console.log(err)})
+            this.message = res.data;
+            if(this.message.message !== 'All fill Entry'){
+                toast("Your order placed");                    
+                console.log("message ;.....",this.message);
+            }
+        },(err)=>{console.log(err)
+        })
     }
+
     
     render(){
         return (

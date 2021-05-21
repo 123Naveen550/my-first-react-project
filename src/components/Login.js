@@ -70,14 +70,14 @@ class Login extends Component{
             console.log(res.data)
             this.message = res.data;
             if(this.message.message !== 'Invalid Credentials'){
-                toast("Welcome to Our CakeShop");                    
+                toast("Welcome to CakeShop");                    
                 console.log("message ;.....",this.message);
                 this.props.dispatch({
                     type:"LOGIN",
                     payload:res.data
 
                 })
-                this.props.history.push('/Home');
+                this.props.history.push('/');
             } else {
                 toast("Please Check Your Email or Password");
             } 
