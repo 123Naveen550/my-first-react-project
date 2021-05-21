@@ -15,18 +15,18 @@ class Login extends Component{
   }
 
   vaild=()=>{
-      if(!this.state.login.email.includes("@") && this.state.login.password.length<4){
+      if(this.state.login.email==="" && !this.state.login.email.includes("@") && this.state.login.password.length<4){
           this.setState({
               nameErr:"Invaild Email",
               passErr:"password length must be 4 Character"
           })
       }
-      else if(!this.state.login.email.includes("@")){
+      else if(this.state.login.email==="" && !this.state.login.email.includes("@")){
           this.setState({
               nameErr:"Invaild Email"
           })
       }
-      else if( this.state.login.password.length<4){
+      else if( this.state.login.email==="" && this.state.login.password.length<4){
           this.setState({
               passErr:"password length must be 4 Character"
           })
@@ -82,7 +82,7 @@ class Login extends Component{
                 toast("Please Check Your Email or Password");
             } 
           },(err)=>{
-              toast(" Sorry You enter Wrong details");
+              toast("Please enter all details");
           })            
       }   
       else{
