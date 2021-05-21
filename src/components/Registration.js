@@ -43,7 +43,7 @@ class Registration  extends Component{
     {
         return(
             <div>
-                <form style={{padding:"10em 27em", backgroundColor:"lightblue"}}>
+                <form style={{padding:"10em 27em"}}>
                 <div class="form-group">
                 <h1 style={{color:"red"}}>Registration</h1>
                 <label for="Full Name">Full Name</label>
