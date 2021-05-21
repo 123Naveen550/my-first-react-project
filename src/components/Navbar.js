@@ -23,9 +23,9 @@ class Navbar extends Component{
 render(){
     return(
         <div>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style= {{backgroundColor:"#D9456D", zIndex:30}}>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style= {{backgroundColor:"#ce9f6f", zIndex:30}}>
   <div class="container-fluid">
-   <Link to="/Home"><a class="navbar-brand" href="#" style={{color:"white"}} >My Cake Shop</a></Link>
+   <Link to="/Home"><a class="navbar-brand" href="#" style={{color:"black"}} >My Cake Shop</a></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,7 +56,7 @@ render(){
 
 {this.props.isloggedin && <button type="button" class="btn btn-outline-info" onClick={this.logout.bind(this)}>logout</button>} 
 {!this.props.isloggedin && <Link to="/Login"><button type="button" class="btn btn-outline-info" style={{ backgroundColor:"orange" ,color:"black", border:"1px solid white"}}>Login</button></Link>}
-{this.props.isloggedin && <Link to="/Myorder"><button type="button" class="btn btn-outline-info" style={{ margin:"4%",color:"white" ,backgroundColor:"brown", border:"1px solid white"}}>Myorder</button></Link>}
+{this.props.isloggedin && <Link to="/Myorder"><button type="button" class="btn btn-outline-info" style={{ margin:"5%",color:"white" ,backgroundColor:"brown", border:"1px solid white"}}>Myorder</button></Link>}
    
   
 </nav>

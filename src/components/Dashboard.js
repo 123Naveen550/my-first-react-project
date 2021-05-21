@@ -44,11 +44,11 @@ function DashBoard(props) {
                   Filter
                 </button> */}
               </div>
-            <Link to="/Addcake"><button type="button" class="btn btn-secondary">Addcake</button></Link>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <Link to="/Addcake"><button type="button" class="btn btn-secondary"  style={{ backgroundColor:"orange" ,color:"black", border:"1px solid white"}}>Addcake</button></Link>
+              {/* <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
                 This week
-              </button>
+              </button> */}
             </div>
           </div>
           <div class="table-responsive">

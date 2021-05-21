@@ -96,7 +96,7 @@ class Login extends Component{
     {
         return(
           <div>
-          <form style={{padding:"10em 27em", backgroundColor:"#A10B23 " ,color:"white"}}>
+          <form style={{padding:"10em 27em" ,color:"black"}}>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" onChange={this.getemail} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>

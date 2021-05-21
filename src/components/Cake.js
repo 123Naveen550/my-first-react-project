@@ -19,11 +19,13 @@ class Cake extends Component {
         console.log("state,",this.props)
 
         return (
+            
             <div>   
             <Link to={`/cakedetails/${this.props.cakedata.cakeid}`}>
             <div onClick = {()=>{
+                
 
-        }} class="card" style={{width: "17rem" ,top:"6em",  border:"5px solid black", boxshadow:"3px 3px 2px 2px "}}>
+        }} class="card" style={{width: "17rem" ,top:"2em",margin:"2rem",border:"3px solid white"}}>
         <img style={{height:"15em"}} src={this.props.cakedata.image} class="card-img-top" alt="..."></img>
         <div class="card-body">
                 <h5 class="card-title">{this.props.cakedata.name}</h5>                

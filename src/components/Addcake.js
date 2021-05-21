@@ -54,7 +54,7 @@ function Addcake() {
    
    return (
             <div>                
-                <form style={{ marginTop: "4em", padding: "1.5em 28em", backgroundColor: "#DF7E92" }}>
+                <form style={{ marginTop: "4em", padding: "1.5em 28em" }}>
                 <h3 style={{ backgroundColor: "#F7F2F2", color: "tomato" ,fontFamily:"monospace" }}>Add cake </h3>
             <hr></hr>
                     <div class="form-group" >

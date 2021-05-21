@@ -35,7 +35,7 @@ class Newpass extends Component{
     {
         return(
             <div>
-            <form style={{padding:"10em 27em", backgroundColor:"#7fffd4"}}>
+            <form style={{padding:"10em 27em"}}>
             
      <div class="form-group">
     <label for="Email">Email</label>
