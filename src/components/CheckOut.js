@@ -67,46 +67,58 @@ import { toast } from "react-toastify";
     
     render(){
         return (
-            <div style={{margin:"-30px"}}>
-            <div style={{position:"fixed",left:"0px",right:"0px"}}>
-            <div style={{width:"400px" ,margin:"100px 450px"}}>
-                <form style={{border:"2px solid #7E7C7C",boxShadow:"2px"}} >
-                    <h1 style={{color:"black"}}>Order Details</h1>
-                <div className="form-group">
-                    <label for="exampleInputId"> Name</label>
-                    <input type="text" onChange={this.userName.bind(this)}  className="form-control" id="exampleInputId" aria-describedby="IdHelp" ></input>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputName"> Address</label>
-                    <input type="text" onChange={this.address.bind(this)} className="form-control" id="exampleInputName"></input>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputName">City</label>
-                    <input type="text" onChange={this.city.bind(this)} className="form-control" id="exampleInputName"></input>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputName">pin code</label>
-                    <input type="number" onChange={this.pin.bind(this)} className="form-control" id="exampleInputName"></input>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputName">phone No</label>
-                    <input type="number" onChange={this.phone.bind(this)} className="form-control" id="exampleInputName"></input>
-                </div>
-                
-                {/* <div className="form-group">
-                    <label for="exampleInputName">Cakes</label>
-                    <input type="text" className="form-control" id="exampleInputName">
-                    </input>
-                </div> */}
-                <div className="form-group">
-                    <label for="exampleInputPrice">price</label>
-                    <input type="Number" className="form-control" id="exampleInputPrice" ></input>
-                </div>
-                <button type="submit" className="btn btn-success" onClick={this.orderPlace.bind(this)}>Order Place</button>
-                </form>
-            </div>
-            </div>
-            
+            <div>
+      <div>        
+         <main role="main" class=" ml-sm-auto col-lg-9">
+          <div class="table-responsive" >
+          <form   style={{ marginTop: "10em", width: "60vw" }}>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault01" style={{ width: "50vw", fontSize: "1em" }}>Name</label>
+                  <input type="text" onChange={this.userName.bind(this)} class="form-control" style={{ width: "50vw", height: "3em" }} id="validationDefault01" placeholder="First name" required />
+           
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault02" style={{ width: "50vw", fontSize: "1em" }}>Phone</label>
+                  <input type="number" onChange={this.phone.bind(this)} class="form-control" style={{ width: "50vw", height: "3em" }} id="validationDefault02" placeholder="Phone" required />
+           
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault03" style={{ width: "50vw", fontSize: "1em" }}>Address</label>
+                  <input type="text" onChange={this.address.bind(this)} class="form-control" style={{ width: "50vw", height: "3em" }} id="validationDefault03" placeholder="Address" required />
+           
+                  </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault04">City</label>
+                  <input type="text" class="form-control" onChange={this.city.bind(this)} id="validationDefault04" placeholder="City" required />
+           
+                  </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault05">Pincode</label>
+                  <input type="number" class="form-control" onChange={this.pin.bind(this)} id="validationDefault05" placeholder="Pin Code" required />
+           
+                  </div>
+              </div>
+              <button class="btn btn-primary" type="submit" onClick={this.orderPlace} style={{ marginRight: "2em", marginTop: "1em" }}>Submit</button>
+            </form>
+          </div>
+        </main>       
+        </div>
+        {/* <div>
+          {
+            this.cakeoderlist.map((ele,index)=>{
+              return (
+                <OrderList key={index} cakedata={ele} />
+            )
+            })
+          }
+        </div> */}
         </div>
         )
     }
