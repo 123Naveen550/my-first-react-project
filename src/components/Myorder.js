@@ -34,12 +34,13 @@ class Myorder extends Component {
     console.log(this.state.orderCakeList);
     return (
       <div>
-        <table class="table" style={{ marginTop: "100px" }}>
+        <table class="table" style={{ marginTop: "70px" }}>
           <thead class="thead-dark">
             <tr>
-              <th scope="col">Orders</th>
+            <h1>Order List</h1>
+              {/* <th scope="col">Orders</th>
               <th scope="col">Date</th>
-              <th scope="col">price</th>
+              <th scope="col">price</th> */}
             </tr>
           </thead>
         </table>
