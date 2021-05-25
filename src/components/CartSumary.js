@@ -1,13 +1,14 @@
 import { Component } from "react";
 
 class CartSumary extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
            
         }
     }
     render() {
+        console.log(this.props)
         return ( 
             <div >
                 <main role="main" class=" ml-sm-auto col-lg-5">

@@ -1,21 +1,43 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import { toast } from 'react-toastify'
 
 class Product extends Component {
-    cakes=[]
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
-            quantity:1
+        quantity:1,
+        cakeInfos:[]
         }
     }
+    // for store all cake details
+    cakeinfos=[]
+    componentDidMount() {
+        this.cakeinfos.push(this.props.cakecart);
+        this.setState({
+            cakeInfos:this.cakeinfos
+        })
+    }
+    
+
     remove = () => {
-        console.log(this.props.cakecart.cakeid)
-        axios.post('https://apifromashu.herokuapp.com/api/removecakefromcart', { cakeid: this.props.cakecart.cakeid },
+        // console.log(this.props.cakecart)
+        this.setState({isloading:true})
+        axios.post('https://apifromashu.herokuapp.com/api/removecakefromcart', { cakeid: this.props.cakecart.cakeid },  //404 cakeid: 
             { headers: { "authtoken": localStorage.tokenId } })
             .then((res) => {            
-            console.log(res)
+            // console.log(res.data);      
+            if(res.data.message === "Removed  item from cart"){
+                toast.warn("Item is removed");
+                this.setState({
+                    cakeinfos:this.cakeinfos.splice(0,1)
+                })         
+                window.location.href="/Carts"
+            }
+            else{
+                toast.warn("Cake not found")// it a msg do not be 
+            }
         }, (err) => {
             console.log(err)
         })

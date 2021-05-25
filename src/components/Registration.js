@@ -1,6 +1,7 @@
 import {Component} from "react"
 import {Link} from "react-router-dom"
 import axios from "axios";
+import { toast } from "react-toastify";
 class Registration  extends Component{
     constructor(){
         super()
@@ -9,6 +10,7 @@ class Registration  extends Component{
     }
 
     users = {}
+    message={}
 
     getname =(event)=> {
         console.log(event.target.value);
@@ -32,10 +34,17 @@ class Registration  extends Component{
             url:"https://apifromashu.herokuapp.com/api/register",
             data:this.users
         }).then((res)=>{
-            console.log("response",res);
+            console.log("response",res.data.message);
+            if(res.data.message !=="User Already Exists"){
+                toast.success("Register Successdfully");
+             }
+             else{
+                 toast.warn("User Is Already Registered");
+             }
         },(err)=>{
-            console.log("error",err);
-        })
+            // console.log("error",err);
+            toast("Please enter all details");
+          })            
     }
 
 

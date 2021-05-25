@@ -15,24 +15,41 @@ class Login extends Component{
   }
 
   vaild=()=>{
-      if(this.state.login.email==="" && !this.state.login.email.includes("@") && this.state.login.password.length<4){
-          this.setState({
-              nameErr:"Invaild Email",
-              passErr:"password length must be 4 Character"
-          })
-      }
-      else if(this.state.login.email==="" && !this.state.login.email.includes("@")){
-          this.setState({
-              nameErr:"Invaild Email"
-          })
-      }
-      else if( this.state.login.email==="" && this.state.login.password.length<4){
-          this.setState({
-              passErr:"password length must be 4 Character"
-          })
-      }
-      else{
-          return true;
+    if(!this.state.login.email ){
+        this.setState({
+            nameErr:"please enter your Email",
+            
+        })
+    }
+    else if(!this.state.login.password){
+        this.setState({
+            passErr:"please fill your vaild password"
+        })
+    }
+    else if(!this.state.login.email && !this.state.login.password || !this.state.login.email.includes("@")){
+        this.setState({
+            nameErr:"Invaild Credentails",
+            passErr:"Password length must be aleast 4 or above Character"
+        })
+    }
+    else if(this.state.login.email && !this.state.login.email.includes("@")){
+        this.setState({
+            nameErr:"Invaild Email"
+        })
+    }
+    
+    else if(!this.state.login.password || this.state.login.password.length<4){
+        this.setState({
+            passErr:"Please Enter Your Vaild Password"
+        })
+    }
+    else if(!this.state.login.password  && this.state.login.password.length<4){
+        this.setState({
+            passErr:"Password length must be aleast 4 or above Character"
+        })
+    }
+    else{
+        return true;
       }
   }
   
